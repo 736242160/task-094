@@ -1,0 +1,12 @@
+def main() {
+      # 初始化 { 这里的括号不算
+      data = load("{not-a-block}")
+        if (data.ok) {
+        run(data)
+        } else {
+   log("}")  // 字符串和注释里的 } 豁免
+        }
+  tail = """
+   多行字符串 { 原样保留
+"""
+  extra (
